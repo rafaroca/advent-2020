@@ -1,6 +1,7 @@
 (ns advent-2020.core
   (:require [advent-2020.day1 :as day1])
   (:require [advent-2020.day2 :as day2])
+  (:require [advent-2020.day3 :as day3])
   (:gen-class))
 
 (defn read-input [file-name]
@@ -14,6 +15,7 @@
   [& _]
   (let [input1 (read-input "input_day1.txt")
         input2 (read-input "input_day2.txt")
+        input3 (read-input "input_day3.txt")
         day1-part1-tuple (day1/sum2020 2 input1)
         day1-part2-tuple (day1/sum2020 3 input1)
         day1-part1-solution (day1/product2020 day1-part1-tuple)
@@ -21,4 +23,5 @@
     (println "Day 1: tuple " day1-part1-tuple " product " day1-part1-solution)
     (println "Day 1 part 2: tuple " day1-part2-tuple " product " day1-part2-solution)
     (println "Day 2: count " (day2/count-valid-passwords-part1 input2))
-    (println "Day 2 part 2: " (day2/count-valid-passwords-part2 input2))))
+    (println "Day 2 part 2: " (day2/count-valid-passwords-part2 input2))
+    (println "Day 3: " (day3/tree-hit-count-part1 input3))))
