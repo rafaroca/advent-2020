@@ -21,13 +21,15 @@
               count))))
 
 (defn count-valid-passwords-part1 [input]
-  (count (->> input
-              (map extract-policy)
-              (map validate-password-part1)
-              (filter true?))))
+  (->> input
+       (map extract-policy)
+       (map validate-password-part1)
+       (filter true?)
+       count))
 
 (defn count-valid-passwords-part2 [input]
-  (count (->> input
-              (map extract-policy)
-              (map validate-password-part2)
-              (filter true?))))
+  (->> input
+       (map extract-policy)
+       (map validate-password-part2)
+       (filter true?)
+       count))

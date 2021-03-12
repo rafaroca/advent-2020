@@ -24,4 +24,4 @@
     (println "Day 1 part 2: tuple " day1-part2-tuple " product " day1-part2-solution)
     (println "Day 2: count " (day2/count-valid-passwords-part1 input2))
     (println "Day 2 part 2: " (day2/count-valid-passwords-part2 input2))
-    (println "Day 3: " (day3/tree-hit-count-part1 input3))))
+    (println "Day 3: " (day3/tree-hit-count [{:right 3 :down 1}] input3) " part 2: " (day3/tree-hit-count day3/sledding-patterns input3))))
