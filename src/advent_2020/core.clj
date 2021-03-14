@@ -27,4 +27,4 @@
     (println "Day 2: count " (day2/count-valid-passwords-part1 input2))
     (println "Day 2 part 2: " (day2/count-valid-passwords-part2 input2))
     (println "Day 3: " (day3/tree-hit-count [{:right 3 :down 1}] input3) " part 2: " (day3/tree-hit-count day3/sledding-patterns input3))
-    (println "Day 4: " (day4/count-valid-passports-part1 input4))))
+    (println "Day 4: " (day4/count-valid-passports-part1 input4) " part 2: " (day4/count-valid-passports-part2 input4))))
