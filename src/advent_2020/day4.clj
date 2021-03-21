@@ -12,33 +12,27 @@
          (into {}))))
 
 (defn parse-input-to-passports [input]
-  (loop [passports []
-         current-passport {}
-         lines input]
-    (if (nil? lines)
-      (cons current-passport passports)
-      (let [[current-line & lines-rs] lines]
-        (if (empty? current-line)
-          (recur (cons current-passport passports)
-                 {}
-                 lines-rs)
-          (recur passports
-                 (into current-passport (line-to-partial-passport current-line))
-                 lines-rs))))))
+  (reduce (fn [[current-passport & rx :as passports] line]
+            (if (seq line)
+              (cons (into current-passport (line-to-partial-passport line)) rx)
+              (cons () passports)))
+    ()
+    input))
 
 (defn contains-all-required-attributes? [passport]
-  (every? passport [:byr :iyr :eyr :hgt :hcl :ecl :pid]))
+  (let [passport-map (into {} passport)]
+    (every? passport-map [:byr :iyr :eyr :hgt :hcl :ecl :pid])))
 
 (defn count-valid-passports-part1 [input]
   (->> input
-      parse-input-to-passports
-      (filter contains-all-required-attributes?)
-      count))
+       parse-input-to-passports
+       (filter contains-all-required-attributes?)
+       count))
 
 (defn parse-number [number-string]
   (try
     (Integer/parseInt number-string)
-    (catch Exception e
+    (catch Exception _
       nil)))
 
 (defn parse-height [v]
