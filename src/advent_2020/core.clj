@@ -33,4 +33,4 @@
     (println "Day 3: " (day3/tree-hit-count [{:right 3 :down 1}] input3) " part 2: " (day3/tree-hit-count day3/sledding-patterns input3))
     (println "Day 4: " (day4/count-valid-passports-part1 input4) " part 2: " (day4/count-valid-passports-part2 input4))
     (println "Day 5: " (day5/max-seat-id input5) " part 2: " (day5/find-my-seat input5))
-    (println "Day 6: " (day6/sum-distinct-group-answers input6))))
+    (println "Day 6: " (day6/sum-distinct-group-answers input6) " part 2: " (day6/count-intersected-answers input6))))
