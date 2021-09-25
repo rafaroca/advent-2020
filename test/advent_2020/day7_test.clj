@@ -25,3 +25,6 @@
 
 (deftest should-count-possible-outer-bags
   (is (= 4 (count-all-bags-possibly-containing "shiny gold" test-input))))
+
+(deftest should-count-all-contained-bags
+  (is (= 32 (count-all-contained-bags "shiny gold" test-input))))

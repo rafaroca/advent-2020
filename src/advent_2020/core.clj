@@ -36,4 +36,4 @@
     (println "Day 4: " (day4/count-valid-passports-part1 input4) " part 2: " (day4/count-valid-passports-part2 input4))
     (println "Day 5: " (day5/max-seat-id input5) " part 2: " (day5/find-my-seat input5))
     (println "Day 6: " (day6/sum-distinct-group-answers input6) " part 2: " (day6/count-intersected-answers input6))
-    (println "Day 7: " (day7/count-all-bags-possibly-containing "shiny gold" input7))))
+    (println "Day 7: " (day7/count-all-bags-possibly-containing "shiny gold" input7) " part 2: " (day7/count-all-contained-bags "shiny gold" input7))))
