@@ -37,7 +37,6 @@
                            (map :parent-color)
                            set)
         all-combined-colors (set/union parent-colors colors)]
-    (println "colors " colors " parent colors " parent-colors)
     (if (= colors all-combined-colors)
       colors
       (recur all-combined-colors parsed-bags))))

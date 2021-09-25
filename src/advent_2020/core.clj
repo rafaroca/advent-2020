@@ -6,6 +6,7 @@
   (:require [advent-2020.day5 :as day5])
   (:require [advent-2020.day6 :as day6])
   (:require [advent-2020.day7 :as day7])
+  (:require [advent-2020.day8 :as day8])
   (:gen-class))
 
 (defn read-input [file-name]
@@ -24,6 +25,7 @@
         input5 (read-input "input_day5.txt")
         input6 (read-input "input_day6.txt")
         input7 (read-input "input_day7.txt")
+        input8 (read-input "input_day8.txt")
         day1-part1-tuple (day1/sum2020 2 input1)
         day1-part2-tuple (day1/sum2020 3 input1)
         day1-part1-solution (day1/product2020 day1-part1-tuple)
@@ -36,4 +38,5 @@
     (println "Day 4: " (day4/count-valid-passports-part1 input4) " part 2: " (day4/count-valid-passports-part2 input4))
     (println "Day 5: " (day5/max-seat-id input5) " part 2: " (day5/find-my-seat input5))
     (println "Day 6: " (day6/sum-distinct-group-answers input6) " part 2: " (day6/count-intersected-answers input6))
-    (println "Day 7: " (day7/count-all-bags-possibly-containing "shiny gold" input7) " part 2: " (day7/count-all-contained-bags "shiny gold" input7))))
+    (println "Day 7: " (day7/count-all-bags-possibly-containing "shiny gold" input7) " part 2: " (day7/count-all-contained-bags "shiny gold" input7))
+    (println "Day 8: not implemented yet")))
