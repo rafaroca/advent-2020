@@ -23,5 +23,5 @@
   (is (= true (validate-password-part2 valid-policy))))
 
 (deftest should-validate-password-based-on-policy
-  (is (= 2 (count-valid-passwords-part1 input)))
-  )
+  (is (= 2 (count-valid-passwords-part1 input))))
+
