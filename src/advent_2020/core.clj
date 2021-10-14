@@ -39,4 +39,4 @@
     (println "Day 5: " (day5/max-seat-id input5) " part 2: " (day5/find-my-seat input5))
     (println "Day 6: " (day6/sum-distinct-group-answers input6) " part 2: " (day6/count-intersected-answers input6))
     (println "Day 7: " (day7/count-all-bags-possibly-containing "shiny gold" input7) " part 2: " (day7/count-all-contained-bags "shiny gold" input7))
-    (println "Day 8: " (day8/find-acc-at-infinite-loop input8))))
+    (println "Day 8: " (:acc (day8/find-acc-at-infinite-loop input8)) " part 2: " (:acc (day8/acc-for-correctly-flipped-jmp-nop input8)))))
